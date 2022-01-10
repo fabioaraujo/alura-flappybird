@@ -133,9 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 408099430}
   - component: {fileID: 408099429}
-  - component: {fileID: 408099428}
   - component: {fileID: 408099431}
   - component: {fileID: 408099432}
+  - component: {fileID: 408099428}
   m_Layer: 0
   m_Name: aviao1
   m_TagString: Untagged
@@ -143,8 +143,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!60 &408099428
-PolygonCollider2D:
+--- !u!61 &408099428
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -156,7 +156,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.023614973}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -166,28 +166,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.42999998, y: 0.235}
-      - {x: 0.34, y: 0.345}
-      - {x: 0.29, y: 0.36499998}
-      - {x: -0.38, y: 0.36499998}
-      - {x: -0.44, y: 0.345}
-      - {x: -0.44, y: 0.044999998}
-      - {x: -0.37, y: 0.024999999}
-      - {x: -0.26999998, y: -0.13499999}
-      - {x: -0.28, y: -0.235}
-      - {x: -0.24, y: -0.325}
-      - {x: 0.01, y: -0.33499998}
-      - {x: 0.049999997, y: -0.36499998}
-      - {x: 0.26, y: -0.36499998}
-      - {x: 0.41, y: -0.315}
-      - {x: 0.44, y: -0.295}
-      - {x: 0.44, y: 0.195}
-    - - {x: 0.02, y: 0.21499999}
-      - {x: 0.049999997, y: 0.21499999}
-      - {x: 0.06, y: 0.205}
-      - {x: 0.02, y: 0.205}
+  serializedVersion: 2
+  m_Size: {x: 0.88, y: 0.65578145}
+  m_EdgeRadius: 0
 --- !u!212 &408099429
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -518,6 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1711604429}
   - component: {fileID: 1711604428}
+  - component: {fileID: 1711604430}
   m_Layer: 0
   m_Name: fundo
   m_TagString: Untagged
@@ -590,3 +572,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1711604430
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711604427}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 2.4969237}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8, y: 4.8}
+    newSize: {x: 8, y: 4.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.20896101}
+  m_EdgeRadius: 0

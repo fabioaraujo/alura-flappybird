@@ -24,6 +24,6 @@ public class Aviao : MonoBehaviour
 
     private void Impulsionar()
     {
-        this.fisica.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+        this.fisica.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
     }
 }
