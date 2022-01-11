@@ -5,11 +5,16 @@ using UnityEngine;
 public class Obstaculo : MonoBehaviour
 {
     [SerializeField]
-    private float velocidade = 0.1f;
+    private float velocidade;
+
+    private void Awake()
+    {
+        this.transform.Translate(Vector3.up * Random.Range(-2f, 1f)); //variação da altura do obstaculo
+    }
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.Translate(Vector3.left * this.velocidade);
+        this.transform.Translate(Vector3.left * this.velocidade * Time.deltaTime);
     }
 }
