@@ -13,8 +13,13 @@ public class Obstaculo : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         this.transform.Translate(Vector3.left * this.velocidade * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D outro)
+    {
+        Destroy(this.gameObject);
     }
 }
