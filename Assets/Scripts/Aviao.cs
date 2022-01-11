@@ -6,6 +6,7 @@ using UnityEngine;
 public class Aviao : MonoBehaviour
 {
     private Rigidbody2D fisica;
+    [SerializeField]
     private float forca = 5;
 
     //metodo que o Unity usa ao inicializar a classe
