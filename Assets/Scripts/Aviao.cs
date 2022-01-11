@@ -6,7 +6,9 @@ using UnityEngine;
 public class Aviao : MonoBehaviour
 {
     private Rigidbody2D fisica;
+    private float forca = 5;
 
+    //metodo que o Unity usa ao inicializar a classe
     private void Awake()
     {
         this.fisica = this.GetComponent<Rigidbody2D>();
@@ -24,6 +26,6 @@ public class Aviao : MonoBehaviour
 
     private void Impulsionar()
     {
-        this.fisica.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+        this.fisica.AddForce(Vector2.up * this.forca, ForceMode2D.Impulse);
     }
 }
