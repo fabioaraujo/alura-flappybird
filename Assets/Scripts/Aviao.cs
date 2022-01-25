@@ -9,19 +9,27 @@ public class Aviao : MonoBehaviour
     [SerializeField]
     private float forca = 5;
 
+    private Vector3 posicaoInicial;
+
     private Diretor diretor;
 
     //metodo que o Unity usa ao inicializar a classe
-    private void Awake()
+    private void Awake()//aqui alguns objetos da cena podem não existir ainda
     {
         this.fisica = this.GetComponent<Rigidbody2D>();
 
+        this.posicaoInicial = this.transform.position;
+    }
+
+    private void Start() //a cena já foi criada com todos os objetos
+    {
         this.diretor = GameObject.FindObjectOfType<Diretor>();
     }
 
     // Update is called once per frame
     private void Update()
     {
+        this.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
         if (Input.GetButtonDown("Fire1"))
         {
             this.Impulsionar();
@@ -41,5 +49,12 @@ public class Aviao : MonoBehaviour
         this.fisica.simulated = false;
 
         this.diretor.FinalizarJogo();
+    }
+
+    public void Reiniciar()
+    {
+        this.transform.position = this.posicaoInicial;
+        
+        this.fisica.simulated = true;
     }
 }
