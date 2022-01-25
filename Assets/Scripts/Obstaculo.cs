@@ -20,6 +20,6 @@ public class Obstaculo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D outro)
     {
-        Destroy(this.gameObject);
+        GameObject.Destroy(this.gameObject);
     }
 }

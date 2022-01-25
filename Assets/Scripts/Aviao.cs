@@ -9,10 +9,14 @@ public class Aviao : MonoBehaviour
     [SerializeField]
     private float forca = 5;
 
+    private Diretor diretor;
+
     //metodo que o Unity usa ao inicializar a classe
     private void Awake()
     {
         this.fisica = this.GetComponent<Rigidbody2D>();
+
+        this.diretor = GameObject.FindObjectOfType<Diretor>();
     }
 
     // Update is called once per frame
@@ -29,5 +33,13 @@ public class Aviao : MonoBehaviour
     {
         this.fisica.velocity = Vector2.zero;
         this.fisica.AddForce(Vector2.up * this.forca, ForceMode2D.Impulse);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //se bater em algo parar de simular fisica
+        this.fisica.simulated = false;
+
+        this.diretor.FinalizarJogo();
     }
 }
